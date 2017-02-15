@@ -1,51 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Language</th>
-      <th>Password</th>
-      <th>Avatar</th>
-      <th>Recipes</th>
-      <th>Following</th>
-      <th>Followers</th>
-      <th>Translated</th>
-      <th>Points</th>
-      <th>Menu</th>
-      <th>Planner</th>
-      <th>Shoplist</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+  <h1>All Users</h1>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+    <thead>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.language %></td>
-        <td><%= user.password %></td>
-        <td><%= user.avatar %></td>
-        <td><%= user.recipes %></td>
-        <td><%= user.following %></td>
-        <td><%= user.followers %></td>
-        <td><%= user.translated %></td>
-        <td><%= user.points %></td>
-        <td><%= user.menu %></td>
-        <td><%= user.planner %></td>
-        <td><%= user.shoplist %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <!-- <th>Email</th> -->
+        <th>Language</th>
+        <!-- <th>Password</th> -->
+        <th>Avatar</th>
+        <th>Recipes</th>
+        <th>Following</th>
+        <th>Followers</th>
+        <th>Translated</th>
+        <th>Points</th>
+        <!-- <th>Menu</th> -->
+        <!-- <th>Planner</th> -->
+        <!-- <th>Shoplist</th> -->
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <!-- <td><%= user.email %></td> -->
+          <td><%= user.language %></td>
+          <!-- <td><%= user.password %></td> -->
+          <td><%= user.avatar %></td>
+          <td><%= user.recipes %></td>
+          <td><%= user.following %></td>
+          <td><%= user.followers %></td>
+          <td><%= user.translated %></td>
+          <td><%= user.points %></td>
+          <!-- <td><%= user.menu %></td> -->
+          <!-- <td><%= user.planner %></td> -->
+          <!-- <td><%= user.shoplist %></td> -->
+          <td><%= link_to 'Show', user %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <br>
 
-<%= link_to 'New User', new_user_path %>
+  <%= link_to 'New User', new_user_path %>
+</div>
