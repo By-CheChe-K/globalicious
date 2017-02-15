@@ -1,6 +1,15 @@
-# TO DOs and IDEAs
+# TO DOs
 (list old -> new)
 
-* Deploy to Heroku
 
+
+
+
+
+* Design users#index view
+* Deploy to Heroku - v
+
+# IDEAs
+
+*
 *
