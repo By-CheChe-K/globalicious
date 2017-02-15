@@ -1,0 +1,82 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :recipes %>
+    <%= f.number_field :recipes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :following %>
+    <%= f.number_field :following %>
+  </div>
+
+  <div class="field">
+    <%= f.label :followers %>
+    <%= f.number_field :followers %>
+  </div>
+
+  <div class="field">
+    <%= f.label :translated %>
+    <%= f.text_field :translated %>
+  </div>
+
+  <div class="field">
+    <%= f.label :points %>
+    <%= f.number_field :points %>
+  </div>
+
+  <div class="field">
+    <%= f.label :menu %>
+    <%= f.text_area :menu %>
+  </div>
+
+  <div class="field">
+    <%= f.label :planner %>
+    <%= f.text_area :planner %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shoplist %>
+    <%= f.text_area :shoplist %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

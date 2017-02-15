@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @user.language %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @user.avatar %>
+</p>
+
+<p>
+  <strong>Recipes:</strong>
+  <%= @user.recipes %>
+</p>
+
+<p>
+  <strong>Following:</strong>
+  <%= @user.following %>
+</p>
+
+<p>
+  <strong>Followers:</strong>
+  <%= @user.followers %>
+</p>
+
+<p>
+  <strong>Translated:</strong>
+  <%= @user.translated %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @user.points %>
+</p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @user.menu %>
+</p>
+
+<p>
+  <strong>Planner:</strong>
+  <%= @user.planner %>
+</p>
+
+<p>
+  <strong>Shoplist:</strong>
+  <%= @user.shoplist %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
