@@ -1,6 +1,39 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+$navbar-default-bg: #A30030;
 
-.container {
-    background-color: #00ff00;
+.navbar {
+  background-color: black;
+}
+
+.navbar-brand {
+  float: left;
+  font-size: 1.3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }

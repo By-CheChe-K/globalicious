@@ -41,9 +41,9 @@
               <!-- <td><%= user.menu %></td> -->
               <!-- <td><%= user.planner %></td> -->
               <!-- <td><%= user.shoplist %></td> -->
-              <td><%= link_to 'Show', user %></td>
-              <td><%= link_to 'Edit', edit_user_path(user) %></td>
-              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Show', user, class: "label label-success" %></td>
+              <td><%= link_to 'Edit', edit_user_path(user), class: "label label-primary" %></td>
+              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %></td>
             </tr>
           <% end %>
         </tbody>
@@ -51,5 +51,5 @@
       </div>
       <br>
 
-      <%= link_to 'New User', new_user_path %>
+      <%= link_to 'New User', new_user_path, class: "label label-success" %>
     </div>
