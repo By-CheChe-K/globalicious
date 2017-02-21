@@ -37,9 +37,9 @@
           <!-- <td><%= recipe.likes %></td> -->
           <td><%= recipe.notes %></td>
           <td><%= recipe.comments %></td>
-          <td><%= link_to 'Show', recipe %></td>
-          <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-          <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', recipe, class: "label label-success" %></td>
+          <td><%= link_to 'Edit', edit_recipe_path(recipe), class: "label label-primary" %></td>
+          <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?'}, class: "label label-danger" %></td>
         </tr>
       <% end %>
     </tbody>
@@ -47,5 +47,5 @@
   </div>
   <br>
 
-  <%= link_to 'New Recipe', new_recipe_path %>
+  <%= link_to 'New Recipe', new_recipe_path, class: "label label-success" %>
 </div>
