@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
   # POST /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
-
+    #@recipe.user = current_user # ADDED BY BINA
     respond_to do |format|
       if @recipe.save
         format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
@@ -69,6 +69,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:title, :picture, :author, :ingredients, :description, :serving, :language, :preptime, :cooktime, :likes, :notes, :comments)
+      params.require(:recipe).permit(:title, :picture, :user_id, :ingredients, :description, :serving, :language, :preptime, :cooktime, :likes, :notes, :comments)
     end
 end
