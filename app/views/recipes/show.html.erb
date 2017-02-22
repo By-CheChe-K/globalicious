@@ -55,10 +55,12 @@
   <%= @recipe.notes %>
 </p>
 
+
 <p>
   <strong>Comments:</strong>
   <%= @recipe.comments %>
 </p>
+
 
 <%= link_to 'Edit', edit_recipe_path(@recipe), class: "label label-success" %> |
 <%= link_to 'Back', recipes_path, class: "label label-warning" %>
