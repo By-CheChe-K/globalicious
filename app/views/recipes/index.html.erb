@@ -28,8 +28,8 @@
           <td><%= recipe.title %></td>
           <td><%= recipe.picture %></td>
           <td><%= recipe.user_id %></td>
-          <td><%= recipe.ingredients %></td>
-          <td><%= recipe.description %></td>
+          <td><%= truncate(recipe.ingredients, length: 15) %></td>
+          <td><%= truncate(recipe.description, length: 15) { link_to "more", "#" }%></td>
           <!-- <td><%= recipe.serving %></td> -->
           <td><%= recipe.language %></td>
           <!-- <td><%= recipe.preptime %></td> -->
